@@ -1,0 +1,32 @@
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(222, 255, 155);
+
+  &__container {
+    padding: 80px 0 0;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    height: 120px;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 800;
+
+    margin-top: 50px;
+    border-bottom: 5px solid black;
+    padding: 0 10px 25px;
+  }
+
+  &__list {
+    display: block;
+  }
+}

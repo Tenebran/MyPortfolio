@@ -1,0 +1,16 @@
+.header {
+  height: 80px;
+  background-color: rgb(148, 175, 224);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  &__wrapper {
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
