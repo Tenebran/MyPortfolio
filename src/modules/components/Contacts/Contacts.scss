@@ -1,0 +1,84 @@
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #171717;
+  color: #fff;
+
+  &__container {
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 80px 0 0 0;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 50px;
+    border-bottom: 5px solid #fff;
+    padding: 0 10px 25px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    height: 120px;
+    margin: 0 0 70px;
+  }
+
+  &__form {
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+    }
+
+    &__name {
+      width: 100%;
+      background-color: rgb(189, 8, 99);
+      height: 38px;
+      border: 1px solid #fff;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    &__email {
+      width: 100%;
+      background-color: rgb(189, 8, 99);
+      height: 38px;
+      border: 1px solid #fff;
+      color: #fff;
+      font-weight: 800;
+      margin: 10px 0;
+    }
+
+    &__text {
+      width: 100%;
+      background-color: rgb(189, 8, 99);
+      height: 200px;
+      border: 1px solid #fff;
+      color: #fff;
+      font-weight: 800;
+      margin: 0 0 10px 0;
+    }
+
+    &__button {
+      height: 38px;
+      background-color: rgb(189, 8, 99);
+      color: #fff;
+      border: 3px solid #fff;
+      font-size: 20px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: 1s;
+      &:hover {
+        background-color: rgb(236, 63, 150);
+      }
+    }
+  }
+}

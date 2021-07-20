@@ -1,0 +1,25 @@
+.skills {
+  &__image {
+    width: 80px;
+    height: 70px;
+    background-color: burlywood;
+  }
+
+  &__list__item {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    margin: 12px 0;
+    font-size: 24px;
+  }
+
+  &__text {
+    font-size: 19px;
+  }
+}
