@@ -82,3 +82,13 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .contacts {
+    &__form {
+      &__wrapper {
+        margin-top: 0;
+      }
+    }
+  }
+}
