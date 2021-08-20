@@ -6,14 +6,14 @@ export default function Contacts() {
     <div className="contacts">
       <div className="container contacts__container">
         <div className="contacts__wrapper">
-          <span className="contacts__title">CONTACTS</span>
+          <h2 className="contacts__title">CONTACTS</h2>
         </div>
         <div className="contacts__form__wrapper">
           <form className="contacts__form">
-            <input type="name" className="contacts__form__name" />
-            <input type="email" className="contacts__form__email" />
-            <textarea className="contacts__form__text"></textarea>
-            <button className="contacts__form__button">send</button>
+            <input type="name" placeholder="Name" className="contacts__form__name" />
+            <input type="email" placeholder="Email" className="contacts__form__email" />
+            <textarea placeholder="Messages" className="contacts__form__text"></textarea>
+            <button className="contacts__form__button">Send</button>
           </form>
         </div>
       </div>

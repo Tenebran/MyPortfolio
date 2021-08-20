@@ -12,11 +12,12 @@
   }
 
   &__title {
+    color: #d7d7d7;
     font-size: 40px;
     font-weight: 800;
     margin-top: 50px;
-    border-bottom: 5px solid #fff;
-    padding: 0 10px 25px;
+    border-bottom: 3px solid #d7d7d7;
+    padding: 0 10px 80px;
   }
 
   &__wrapper {
@@ -40,44 +41,48 @@
 
     &__name {
       width: 100%;
-      background-color: rgb(189, 8, 99);
+      background-color: #252427;
       height: 38px;
-      border: 1px solid #fff;
+      border: 1px solid #797777;
       color: #fff;
       font-weight: 800;
+      padding: 0 10px;
     }
 
     &__email {
+      padding: 0 10px;
       width: 100%;
-      background-color: rgb(189, 8, 99);
+      background-color: #252427;
       height: 38px;
-      border: 1px solid #fff;
+      border: 1px solid #797777;
       color: #fff;
       font-weight: 800;
       margin: 10px 0;
     }
 
     &__text {
+      padding: 10px 10px;
       width: 100%;
-      background-color: rgb(189, 8, 99);
+      background-color: #252427;
       height: 200px;
-      border: 1px solid #fff;
+      border: 1px solid #797777;
       color: #fff;
       font-weight: 800;
       margin: 0 0 10px 0;
+      resize: none;
     }
 
     &__button {
       height: 38px;
-      background-color: rgb(189, 8, 99);
+      background-color: #252427;
       color: #fff;
-      border: 3px solid #fff;
+      border: 1px solid #797777;
       font-size: 20px;
       font-weight: 900;
       cursor: pointer;
       transition: 1s;
       &:hover {
-        background-color: rgb(236, 63, 150);
+        background-color: rgb(20, 139, 194);
       }
     }
   }

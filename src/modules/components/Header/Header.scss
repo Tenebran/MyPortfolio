@@ -1,6 +1,7 @@
 .header {
+  z-index: 999;
   height: 80px;
-  background-color: rgb(148, 175, 224);
+  background-color: #171717;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,7 +9,8 @@
   left: 0;
   top: 0;
   right: 0;
-
+  opacity: 0.9;
+  font-family: 'Roboto-Condensed-Bold';
   &__wrapper {
     justify-content: flex-end;
     align-items: center;

@@ -1,8 +1,18 @@
 .nav {
-  border: 1px solid black;
+  border: 1px solid #d7d7d7;
   display: flex;
   justify-content: space-around;
   width: 300px;
   align-items: center;
   height: 50px;
+
+  &__link {
+    color: #d7d7d7;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.5s;
+    &:hover {
+      color: rgb(20, 139, 194);
+    }
+  }
 }

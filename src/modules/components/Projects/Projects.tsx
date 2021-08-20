@@ -7,7 +7,7 @@ export default function Projects() {
     <div className="projects">
       <div className="container projects__container">
         <div className="projects__wrapper">
-          <span className="projects__title">PROJECTS</span>
+          <h2 className="projects__title">PROJECTS</h2>
         </div>
         <div className="projects__list">
           <Project />

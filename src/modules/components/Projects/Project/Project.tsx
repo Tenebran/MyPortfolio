@@ -11,7 +11,7 @@ export default function Project() {
           className="projects__image"
         ></img>
       </div>
-      <div className="projects__name">SOCIAL NETWORK</div>
+      <h4 className="projects__name">SOCIAL NETWORK</h4>
       <div className="projects__text">
         SPA, Functional components, Hooks, Material-UI, Forms, Routes, Pagination...
       </div>
