@@ -25,6 +25,7 @@ export default function Projects() {
                 technologies={project.technologies}
                 title={project.title}
                 link={project.link}
+                githubLink={project.githubLink}
               />
             );
           })}

@@ -17,6 +17,7 @@ export type ProjectsType = {
   subTitle: string;
   technologies: string;
   link: string;
+  githubLink: string;
 };
 
 const initialState: Array<ProjectsType> = [
@@ -28,6 +29,7 @@ const initialState: Array<ProjectsType> = [
       'A social networking service. An online platform for people to build social networks or social relationships with other people. ',
     technologies: 'React, Redux, Redux-Form, REST API, Typescript, SCSS',
     link: '#',
+    githubLink: 'https://github.com/Tenebran/social_network',
   },
   {
     id: v1(),
@@ -36,6 +38,7 @@ const initialState: Array<ProjectsType> = [
     subTitle: 'An app for Task Management, Project Management, Productivity. ',
     technologies: 'React, Redux, REST API, Typescript, Formik, Material-UI, Storybook, Unit-tests',
     link: '#',
+    githubLink: 'https://github.com/Tenebran/todo-list',
   },
   {
     id: v1(),
@@ -44,6 +47,7 @@ const initialState: Array<ProjectsType> = [
     subTitle: 'A Pixel Perfect Landing Page.',
     technologies: 'HTML5, SCSS, JavaScript, Gulp',
     link: 'https://tenebran.github.io/go-surf/',
+    githubLink: 'https://github.com/Tenebran/go-surf',
   },
   {
     id: v1(),
@@ -52,6 +56,7 @@ const initialState: Array<ProjectsType> = [
     subTitle: 'A Pixel Perfect Landing Page.',
     technologies: 'HTML5, SCSS',
     link: 'https://tenebran.github.io/Konstrut/',
+    githubLink: 'https://github.com/Tenebran/Konstrut',
   },
   {
     id: v1(),
@@ -60,6 +65,7 @@ const initialState: Array<ProjectsType> = [
     subTitle: 'A Pixel Perfect Landing Page.',
     technologies: 'HTML5, SCSS, Javacript',
     link: 'https://tenebran.github.io/mario/',
+    githubLink: 'https://github.com/Tenebran/mario',
   },
   {
     id: v1(),
@@ -68,6 +74,7 @@ const initialState: Array<ProjectsType> = [
     subTitle: 'A Pixel Perfect Landing Page.',
     technologies: 'HTML5, SCSS, Javacript',
     link: 'https://tenebran.github.io/Bathman/',
+    githubLink: 'https://github.com/Tenebran/Bathman',
   },
   {
     id: v1(),
@@ -76,6 +83,7 @@ const initialState: Array<ProjectsType> = [
     subTitle: 'A Pixel Perfect Landing Page.',
     technologies: 'HTML5, SCSS, Javacript',
     link: 'https://tenebran.github.io/New-Yorker/',
+    githubLink: 'https://github.com/Tenebran/New-Yorker',
   },
   {
     id: v1(),
@@ -84,6 +92,7 @@ const initialState: Array<ProjectsType> = [
     subTitle: 'A Pixel Perfect Landing Page.',
     technologies: 'HTML5, SCSS',
     link: 'https://tenebran.github.io/development_project/',
+    githubLink: 'https://github.com/Tenebran/development_project',
   },
 ];
 
