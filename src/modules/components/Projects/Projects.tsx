@@ -4,6 +4,7 @@ import Project from './Project/Project';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
 import { ProjectsType } from '../../../store/projects-reducers';
+import Fade from 'react-reveal/Fade';
 
 export default function Projects() {
   let projects = useSelector<AppRootStateType, ProjectsType[]>(state => state.projects);
@@ -17,16 +18,17 @@ export default function Projects() {
         <div className="projects__list">
           {projects.map(project => {
             return (
-              <Project
-                key={project.id}
-                id={project.id}
-                image={project.image}
-                subTitle={project.subTitle}
-                technologies={project.technologies}
-                title={project.title}
-                link={project.link}
-                githubLink={project.githubLink}
-              />
+              <Fade key={project.id}>
+                <Project
+                  id={project.id}
+                  image={project.image}
+                  subTitle={project.subTitle}
+                  technologies={project.technologies}
+                  title={project.title}
+                  link={project.link}
+                  githubLink={project.githubLink}
+                />
+              </Fade>
             );
           })}
         </div>

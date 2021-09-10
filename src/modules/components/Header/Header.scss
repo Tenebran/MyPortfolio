@@ -16,3 +16,11 @@
     align-items: center;
   }
 }
+
+@media (max-width: 775px) {
+  .header {
+    &__wrapper {
+      justify-content: center;
+    }
+  }
+}

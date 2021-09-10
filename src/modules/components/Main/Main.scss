@@ -1,7 +1,7 @@
 .main {
-  height: 100vh;
+  position: relative;
   width: 100%;
-  background-color: #130c0c;
+  background-color: #101010;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,22 +9,32 @@
     display: block;
   }
 
+  &__particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
   &__container {
+    padding: 100px 0 10px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   &__wrapper-conteiner {
+    z-index: 99;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #171717;
+    background-color: #171717c2;
     min-height: 580px;
     width: 100%;
     padding: 0 10px;
-    opacity: 0.9;
   }
 
   &__profession {
@@ -43,7 +53,7 @@
     align-items: center;
 
     &__left {
-      height: 570px;
+      max-height: 570px;
       width: 480px;
     }
 
@@ -77,26 +87,42 @@
   }
 
   &__photo {
-    height: 100%;
+    background-size: cover;
+    height: 570px;
     width: 100%;
-    background-color: greenyellow;
+    object-fit: cover;
   }
 }
 
 @media (max-width: 1239px) {
   .main {
-    &__wrapper-conteiner {
-      min-height: 100%;
+    &__container {
+      margin: 50px 0 10px;
+    }
+    &__profession {
+      margin: 20px 0 10px 0;
     }
 
-    &__profession {
-      margin: 100px 0 10px 0;
+    &__wrapper {
+      &__left {
+        margin: 0 0 0px;
+      }
+      &__right {
+        margin: 0 0 10px 0;
+      }
+    }
+    &__photo {
+      height: 570px;
+      object-fit: cover;
     }
   }
 }
 
 @media (max-width: 500px) {
   .main {
+    &__container {
+      padding: 50px 0 10px;
+    }
     min-height: 100vh;
     &__name {
       font-size: 40px;
@@ -108,15 +134,17 @@
 
     &__wrapper {
       &__left {
-        height: 350px;
+        max-height: 50vh;
         width: 480px;
+        margin: 0;
       }
 
-      &__photo {
-        height: 100%;
-        width: 100%;
-        background-color: greenyellow;
+      &__right {
+        margin: 0;
       }
+    }
+    &__photo {
+      max-height: 50vh;
     }
   }
 }

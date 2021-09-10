@@ -1,25 +1,64 @@
 import React from 'react';
 import './Main.scss';
 import '../../common/styles/Container.scss';
+import { useSelector } from 'react-redux';
+import { AppRootStateType } from '../../../store/store';
+import { ProfileType } from '../../../store/profile-reducers';
+import Particles from 'react-particles-js';
+import Fade from 'react-reveal/Fade';
+import ReactTypingEffect from 'react-typing-effect';
+import Tilt from 'react-tilt';
+
+let ParticleParamsDots = {
+  particles: {
+    size: {
+      value: 1,
+    },
+    line_linked: {
+      enable: false,
+    },
+  },
+};
+
+let ParticleParamsLines = {
+  particles: {
+    size: {
+      value: 2,
+    },
+    line_linked: {
+      enable: true,
+    },
+  },
+};
 
 export default function Main() {
+  const profile = useSelector<AppRootStateType, ProfileType>(state => state.profile);
   return (
     <div className="main">
       <div className="container main__container">
-        <div className="main__wrapper-conteiner">
-          <div className="main__wrapper__right">
-            <div className="main__wrapper__right-inner">
-              <span className="main__profession">FrontEnd Developer</span>
-              <span className="main__name">SERGIY</span>
-              <span className="main__surname">GARKUSHA</span>
+        <Particles className="main__particles" params={ParticleParamsDots} />
+        <Particles className="main__particles" params={ParticleParamsLines} />
+        <Fade top>
+          <div className="main__wrapper-conteiner">
+            <div className="main__wrapper__right">
+              <div className="main__wrapper__right-inner">
+                <ReactTypingEffect
+                  text={profile.profession}
+                  speed={300}
+                  typingDelay={1000}
+                  cursor="_"
+                />
+                <span className="main__name">{profile.name}</span>
+                <span className="main__surname">{profile.surname}</span>
+              </div>
             </div>
+            <Tilt className="Tilt" options={{ max: 20, speed: 4000 }}>
+              <div className="main__wrapper__left">
+                <img src={profile.image} alt="profile photo" className="main__photo" />
+              </div>
+            </Tilt>
           </div>
-
-          <div className="main__wrapper__left">
-            <div className="main__photo"></div>
-            {/* <img src='#' alt='main__photo'></img> */}
-          </div>
-        </div>
+        </Fade>
       </div>
     </div>
   );
