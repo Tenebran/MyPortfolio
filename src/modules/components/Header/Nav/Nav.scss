@@ -11,8 +11,15 @@
     font-weight: 700;
     font-size: 16px;
     transition: 0.5s;
+    cursor: pointer;
+    user-select: none;
     &:hover {
       color: rgb(20, 139, 194);
+      border-top: 1px solid rgb(20, 139, 194);
+      padding: 2px 0 0 0;
     }
   }
+}
+.active {
+  color: rgb(20, 139, 194);
 }

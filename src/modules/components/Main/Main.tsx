@@ -52,11 +52,12 @@ export default function Main() {
                 <span className="main__surname">{profile.surname}</span>
               </div>
             </div>
-            <Tilt className="Tilt" options={{ max: 20, speed: 4000 }}>
-              <div className="main__wrapper__left">
+
+            <div className="main__wrapper__left">
+              <Tilt className="Tilt" options={{ max: 20, speed: 4000 }}>
                 <img src={profile.image} alt="profile photo" className="main__photo" />
-              </div>
-            </Tilt>
+              </Tilt>
+            </div>
           </div>
         </Fade>
       </div>

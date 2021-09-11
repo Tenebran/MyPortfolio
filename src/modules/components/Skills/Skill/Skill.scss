@@ -1,10 +1,4 @@
 .skills {
-  &__image {
-    width: 80px;
-    height: 70px;
-    background-color: burlywood;
-  }
-
   &__list__item {
     width: 300px;
     display: flex;
@@ -24,5 +18,10 @@
     font-size: 19px;
     font-weight: 700;
     text-align: center;
+  }
+
+  &__icon {
+    font-size: 80px;
+    color: rgb(20, 139, 194);
   }
 }
