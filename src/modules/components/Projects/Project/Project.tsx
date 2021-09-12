@@ -8,10 +8,20 @@ export default function Project(props: ProjectsType) {
       <div className="projects__image__wrapper">
         <img src={props.image} alt="page" className="projects__image"></img>
         <div className="projects__image__link-wrapper">
-          <a href={props.link} target="_blank" className="projects__image__link">
+          <a
+            href={props.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="projects__image__link"
+          >
             viev more
           </a>
-          <a href={props.githubLink} target="_blank" className="projects__image__link">
+          <a
+            href={props.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="projects__image__link"
+          >
             to github
           </a>
         </div>

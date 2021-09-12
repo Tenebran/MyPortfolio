@@ -1,15 +1,14 @@
 import React from 'react';
 import './Contacts.scss';
 import Fade from 'react-reveal/Fade';
+import { SectionTitle } from '../SectionTitle/SectionTitle';
 
 export default function Contacts() {
   return (
     <div className="contacts">
       <div className="container contacts__container">
         <Fade>
-          <div className="contacts__wrapper">
-            <h2 className="contacts__title">CONTACTS</h2>
-          </div>
+          <SectionTitle title={'CONTACTS'} />
           <div className="contacts__form__wrapper">
             <form className="contacts__form">
               <input type="name" placeholder="Name" className="contacts__form__name" />

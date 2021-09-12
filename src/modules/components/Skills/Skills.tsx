@@ -5,20 +5,18 @@ import Skill from './Skill/Skill';
 import Slide from 'react-reveal/Slide';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
-import { SkillsType } from '../../../store/skills-reducers';
+import { SkillInitialStateType } from '../../../store/skills-reducers';
+import { SectionTitle } from '../SectionTitle/SectionTitle';
 
 export default function Skills() {
-  const skills = useSelector<AppRootStateType, Array<SkillsType>>(state => state.skills);
-  console.log(skills);
+  const skills = useSelector<AppRootStateType, SkillInitialStateType>(state => state.skills);
   return (
     <div className="skills">
       <div className="container skills__container">
         <Slide right>
-          <div className="skills__wrapper">
-            <h2 className="skills__title">SKILLS</h2>
-          </div>
+          <SectionTitle title={skills.skillTitle} />
           <div className="skills__list">
-            {skills.map(skill => {
+            {skills.skills.map(skill => {
               return (
                 <Skill
                   svgIcon={skill.svgIcon}

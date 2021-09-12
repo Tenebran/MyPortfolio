@@ -1,6 +1,6 @@
 import React from 'react';
 import './Nav.scss';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 export default function Nav() {
   return (

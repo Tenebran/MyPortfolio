@@ -55,7 +55,7 @@ export default function Main() {
 
             <div className="main__wrapper__left">
               <Tilt className="Tilt" options={{ max: 20, speed: 4000 }}>
-                <img src={profile.image} alt="profile photo" className="main__photo" />
+                <input type="image" src={profile.image} alt="photo" className="main__photo" />
               </Tilt>
             </div>
           </div>
