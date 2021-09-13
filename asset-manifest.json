@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/MyPortfolio/static/css/main.8802f447.chunk.css",
+    "main.js": "/MyPortfolio/static/js/main.0705fc17.chunk.js",
+    "main.js.map": "/MyPortfolio/static/js/main.0705fc17.chunk.js.map",
+    "runtime-main.js": "/MyPortfolio/static/js/runtime-main.688a7bc4.js",
+    "runtime-main.js.map": "/MyPortfolio/static/js/runtime-main.688a7bc4.js.map",
+    "static/js/2.649b2b5d.chunk.js": "/MyPortfolio/static/js/2.649b2b5d.chunk.js",
+    "static/js/2.649b2b5d.chunk.js.map": "/MyPortfolio/static/js/2.649b2b5d.chunk.js.map",
+    "index.html": "/MyPortfolio/index.html",
+    "static/css/main.8802f447.chunk.css.map": "/MyPortfolio/static/css/main.8802f447.chunk.css.map",
+    "static/js/2.649b2b5d.chunk.js.LICENSE.txt": "/MyPortfolio/static/js/2.649b2b5d.chunk.js.LICENSE.txt",
+    "static/media/fonts.scss": "/MyPortfolio/static/media/RobotoCondensed-Bold.ca410272.woff2",
+    "static/media/bathman.1c65c08b.jpg": "/MyPortfolio/static/media/bathman.1c65c08b.jpg",
+    "static/media/development-project.766ea00c.jpg": "/MyPortfolio/static/media/development-project.766ea00c.jpg",
+    "static/media/go-surf.52ddc623.jpg": "/MyPortfolio/static/media/go-surf.52ddc623.jpg",
+    "static/media/konstrukt.6c2107aa.jpg": "/MyPortfolio/static/media/konstrukt.6c2107aa.jpg",
+    "static/media/mario.d41a7b61.jpg": "/MyPortfolio/static/media/mario.d41a7b61.jpg",
+    "static/media/new-yorker.1f2d59bd.jpg": "/MyPortfolio/static/media/new-yorker.1f2d59bd.jpg",
+    "static/media/profile-image.1d2d0936.jpg": "/MyPortfolio/static/media/profile-image.1d2d0936.jpg",
+    "static/media/social-network.66258699.jpg": "/MyPortfolio/static/media/social-network.66258699.jpg",
+    "static/media/todo-list.2dc55cb0.jpg": "/MyPortfolio/static/media/todo-list.2dc55cb0.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.688a7bc4.js",
+    "static/js/2.649b2b5d.chunk.js",
+    "static/css/main.8802f447.chunk.css",
+    "static/js/main.0705fc17.chunk.js"
+  ]
+}
