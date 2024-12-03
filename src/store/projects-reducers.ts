@@ -7,6 +7,7 @@ import bathmanImage from '../modules/common/image/bathman.jpg';
 import newYorkerImage from '../modules/common/image/new-yorker.jpg';
 import developmentImage from '../modules/common/image/development-project.jpg';
 import cardsImage from '../modules/common/image/cards.jpg';
+import daytrackImage from '../modules/common/image/daytrack-.jpg';
 import { v1 } from 'uuid';
 
 export const projectsReducers = (
@@ -44,24 +45,13 @@ const initialState: ProjectsInitialStateType = {
   projects: [
     {
       id: v1(),
-      image: socialNetwork,
-      title: 'Social network',
-      subTitle:
-        'A social networking service. An online platform for people to build social networks or social relationships with other people. ',
-      technologies:
-        'React, Redux, Redux-Form, REST API, Typescript, SCSS...This app is in progress',
-      link: null,
-      githubLink: 'https://github.com/Tenebran/social_network',
-    },
-    {
-      id: v1(),
-      image: todolistimage,
-      title: 'ToDoList',
+      image: daytrackImage,
+      title: 'DayTrack-',
       subTitle: 'An app for Task Management, Project Management, Productivity. ',
       technologies:
-        'React, Redux, REST API, Typescript, Formik, Material-UI, Storybook, Unit-tests...This app is in progress',
-      link: null,
-      githubLink: 'https://github.com/Tenebran/todo-list',
+        'React, Redux, REST API, Typescript, Formik, Material-UI, Storybook, Unit-tests (Jest), jest-image-snapshot, GitHub Actions, i18next, Retool, ESLint, Vite.',
+      link: 'https://tenebran.github.io/DayTrack-',
+      githubLink: 'https://github.com/Tenebran/DayTrack-',
     },
     {
       id: v1(),
@@ -69,10 +59,19 @@ const initialState: ProjectsInitialStateType = {
       title: 'Cards',
       subTitle:
         'This project is being developed now by me and a team of talented creators. It will help to learn new things with the usage of cards, where, for instance, on the first side can be a word and on the other side -- a definition. ',
-      technologies:
-        'React, Redux, Typescript, REST API, Styled Components...This app is in progress',
+      technologies: 'React, Redux, Typescript, REST API, Styled Components',
       link: 'https://tenebran.github.io/cards-nya/#/checkemail',
       githubLink: 'https://github.com/Tenebran/cards-nya',
+    },
+    {
+      id: v1(),
+      image: socialNetwork,
+      title: 'Social network',
+      subTitle:
+        'A social networking service. An online platform for people to build social networks or social relationships with other people. ',
+      technologies: 'React, Redux, Redux-Form, REST API, Typescript, SCSS',
+      link: null,
+      githubLink: 'https://github.com/Tenebran/social_network',
     },
     {
       id: v1(),

@@ -94,6 +94,13 @@ const initialState: SkillInitialStateType = {
     },
     {
       id: v1(),
+      skillTitle: 'REDUX TOOLKIT',
+      skillDescription:
+        'Simplified state management, Slices, Thunks, Immer, RTK Query, Middleware setup, Code efficiency...',
+      svgIcon: ReduxIcon,
+    },
+    {
+      id: v1(),
       skillTitle: 'REST API',
       skillDescription: 'CRUD Operations, working with Axios library...',
       svgIcon: RestApiIcon,

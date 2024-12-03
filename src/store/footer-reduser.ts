@@ -34,7 +34,7 @@ const initialState: Array<FooterType> = [
     id: v1(),
   },
   {
-    link: 'https://t.me/sergiygarkusha',
+    link: 'https://t.me/sergejgarkusha',
     icon: TelegramIcon,
     id: v1(),
   },
