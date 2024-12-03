@@ -4,41 +4,77 @@ import '../../common/styles/Container.scss';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
 import { ProfileType } from '../../../store/profile-reducers';
-import Particles from 'react-particles-js';
-import Fade from 'react-reveal/Fade';
+import { loadFull } from 'tsparticles';
+import Particles from 'react-tsparticles';
+import { Fade } from 'react-awesome-reveal';
 import ReactTypingEffect from 'react-typing-effect';
-import Tilt from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 
-let ParticleParamsDots = {
-  particles: {
-    size: {
-      value: 1,
-    },
-    line_linked: {
-      enable: false,
-    },
-  },
+const particlesInit = async (engine) => {
+  await loadFull(engine);
 };
 
-let ParticleParamsLines = {
+const particlesOptions = {
+  fullScreen: {},
   particles: {
-    size: {
-      value: 2,
+    number: {
+      value: 50,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
     },
-    line_linked: {
+    color: {
+      value: '#ffffff',
+    },
+    shape: {
+      type: 'circle',
+    },
+    opacity: {
+      value: 0.2,
+    },
+    size: {
+      value: 3,
+      random: true,
+    },
+    move: {
       enable: true,
+      speed: 1.5,
+      direction: 'none' as const,
+      random: false,
+      straight: false,
+      outMode: 'out' as const,
+      bounce: false,
+    },
+    links: {
+      enable: true,
+      distance: 130,
+      color: '#ffffff',
+      opacity: 0.2,
+      width: 1,
     },
   },
 };
 
 export default function Main() {
-  const profile = useSelector<AppRootStateType, ProfileType>(state => state.profile);
+  const profile = useSelector<AppRootStateType, ProfileType>((state) => state.profile);
+
   return (
     <div className="main">
       <div className="container main__container">
-        <Particles className="main__particles" params={ParticleParamsDots} />
-        <Particles className="main__particles" params={ParticleParamsLines} />
-        <Fade top>
+        <Particles
+          className="main__particles"
+          id="tsparticles"
+          init={particlesInit}
+          options={particlesOptions}
+        />
+        <Particles
+          className="main__particles"
+          id="tsparticles"
+          init={particlesInit}
+          options={particlesOptions}
+        />
+        <Fade direction="down">
           <div className="main__wrapper-conteiner">
             <div className="main__wrapper__right">
               <div className="main__wrapper__right-inner">
@@ -52,9 +88,8 @@ export default function Main() {
                 <span className="main__surname">{profile.surname}</span>
               </div>
             </div>
-
             <div className="main__wrapper__left">
-              <Tilt className="Tilt" options={{ max: 20, speed: 4000 }}>
+              <Tilt className="Tilt" tiltMaxAngleX={20} tiltMaxAngleY={20} transitionSpeed={4000}>
                 <input type="image" src={profile.image} alt="photo" className="main__photo" />
               </Tilt>
             </div>

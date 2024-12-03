@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contacts.scss';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 
 export default function Contacts() {
@@ -9,6 +9,7 @@ export default function Contacts() {
       <div className="container contacts__container">
         <Fade>
           <SectionTitle title={'CONTACTS'} />
+
           <div className="contacts__form__wrapper">
             <form className="contacts__form">
               <input type="name" placeholder="Name" className="contacts__form__name" />

@@ -4,17 +4,17 @@ import Project from './Project/Project';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
 import { ProjectsInitialStateType } from '../../../store/projects-reducers';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 
 export default function Projects() {
-  let projects = useSelector<AppRootStateType, ProjectsInitialStateType>(state => state.projects);
+  let projects = useSelector<AppRootStateType, ProjectsInitialStateType>((state) => state.projects);
   return (
     <div className="projects">
       <div className="container projects__container">
         <SectionTitle title={projects.projectsTitle} />
         <div className="projects__list">
-          {projects.projects.map(project => {
+          {projects.projects.map((project) => {
             return (
               <Fade key={project.id}>
                 <Project

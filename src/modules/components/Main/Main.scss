@@ -1,10 +1,13 @@
 .main {
   position: relative;
-  width: 100%;
+  min-width: 100%;
   background-color: #101010;
   display: flex;
   justify-content: center;
+  width: 100%;
   align-items: center;
+  align-items: center;
+
   &__profession {
     display: block;
   }
@@ -15,8 +18,8 @@
     left: 0;
     right: 0;
     bottom: 0;
+    max-width: 100%;
   }
-
   &__container {
     padding: 100px 0 10px;
     min-height: 100vh;
@@ -28,44 +31,48 @@
   &__wrapper-conteiner {
     z-index: 99;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 40px;
+    min-width: 100%;
     background-color: #171717c2;
-    min-height: 580px;
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  &__profession {
-    display: inline-block;
-    font-size: 16px;
-    color: #bbb;
-    font-weight: 700;
+    padding: 0 20px;
+    margin: 0 auto;
+    &__profession {
+      display: inline-block;
+      font-size: 16px;
+      color: #bbb;
+      font-weight: 700;
+    }
   }
 
   &__wrapper {
-    border: 1px solid;
-    height: 570px;
-    width: 80%;
     display: flex;
-    justify-content: space-around;
+    flex: 1;
+    justify-content: center;
     align-items: center;
 
     &__left {
-      max-height: 570px;
-      width: 480px;
+      max-width: 480px;
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 300px;
+      margin-right: 100px;
     }
 
     &__right {
-      width: 480px;
+      max-width: 480px;
+      flex: 1;
       display: flex;
+      justify-content: flex-start;
       align-items: center;
-      margin: 0 0 40px;
+      margin-left: 100px;
 
       &-inner {
         width: 100%;
-        color: #ffff;
+        color: #fff;
         font-weight: 800;
       }
     }
@@ -84,67 +91,147 @@
     font-family: 'Archivo Black';
     display: block;
     font-size: 70px;
+    color: #fff;
+    text-shadow: #000 1px 1px 0, #000 -1px -1px 0, #000 -1px 1px 0, #000 1px -1px 0;
+    line-height: 80px;
   }
 
   &__photo {
     background-size: cover;
     height: 570px;
-    width: 100%;
+    max-width: 500px;
     object-fit: cover;
   }
 }
 
-@media (max-width: 1239px) {
+@media (max-width: 1784px) {
   .main {
-    &__container {
-      margin: 50px 0 10px;
-    }
-    &__profession {
-      margin: 20px 0 10px 0;
-    }
-
     &__wrapper {
       &__left {
-        margin: 0 0 0px;
+        margin-left: 200px;
+        margin-right: 80px;
       }
+
       &__right {
-        margin: 0 0 10px 0;
+        margin-left: 100px;
       }
-    }
-    &__photo {
-      height: 570px;
-      object-fit: cover;
     }
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1635px) {
   .main {
-    &__container {
-      padding: 50px 0 10px;
-    }
-    min-height: 100vh;
-    &__name {
-      font-size: 40px;
-    }
-
-    &__surname {
-      font-size: 40px;
-    }
-
     &__wrapper {
       &__left {
-        max-height: 50vh;
-        width: 480px;
-        margin: 0;
+        margin-left: 80px;
+        margin-right: 40px;
       }
 
       &__right {
-        margin: 0;
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1448px) {
+  .main {
+    &__wrapper {
+      &__left {
+        margin-left: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1385px) {
+  .main {
+    &__wrapper {
+      &__left {
+        margin-left: 75px;
+        margin-right: 10px;
+      }
+
+      &__right {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1281px) {
+  .main {
+    &__wrapper {
+      &__left {
+        margin-left: 30px;
+        margin-right: 5px;
+      }
+
+      &__right {
+        margin-left: 5px;
       }
     }
     &__photo {
-      max-height: 50vh;
+      background-size: cover;
+      height: 400px;
+      width: 380px;
+      object-fit: cover;
+    }
+
+    &__name {
+      font-size: 50px;
+    }
+
+    &__surname {
+      font-size: 50px;
+    }
+  }
+}
+
+@media (max-width: 953px) {
+  .main {
+    &__wrapper {
+      &__left {
+        margin-left: 10px;
+        margin-right: 5px;
+      }
+
+      &__right {
+        margin-left: 5px;
+      }
+    }
+    &__photo {
+      height: 400px;
+      width: 320px;
+    }
+
+    &__name {
+      font-size: 45px;
+    }
+
+    &__surname {
+      font-size: 45px;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .main {
+    &__wrapper-conteiner {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__name,
+    &__surname {
+      font-size: 50px;
+    }
+
+    &__photo {
+      background-size: cover;
+      height: 400px;
+      width: 320px;
+      object-fit: cover;
     }
   }
 }
