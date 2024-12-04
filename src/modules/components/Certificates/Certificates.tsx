@@ -17,6 +17,7 @@ export const Certificates = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState(new Set());
+  const [showCaption, setShowCaption] = useState(true);
 
   useEffect(() => {
     certificates.forEach((cert) => {
@@ -28,6 +29,7 @@ export const Certificates = () => {
   const openLightbox = (index: number) => {
     setCurrentIndex(index);
     setIsOpen(true);
+    setShowCaption(true);
   };
 
   const handleImageLoad = () => {
@@ -40,6 +42,10 @@ export const Certificates = () => {
 
   const prevImage = () => {
     setCurrentIndex((currentIndex - 1 + certificates.length) % certificates.length);
+  };
+
+  const toggleCaption = () => {
+    setShowCaption((prev) => !prev);
   };
 
   return (
@@ -73,7 +79,39 @@ export const Certificates = () => {
               onCloseRequest={() => setIsOpen(false)}
               onMovePrevRequest={prevImage}
               onMoveNextRequest={nextImage}
+              toolbarButtons={[
+                <button
+                  key="toggleCaption"
+                  onClick={toggleCaption}
+                  style={{
+                    position: 'absolute',
+                    top: '60px',
+                    left: '10px',
+                    zIndex: 1000,
+                    backgroundColor: 'rgba(0,0,0,0.5)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '5px',
+                    padding: '5px 10px',
+                    cursor: 'pointer',
+                  }}>
+                  {showCaption ? 'Hide Caption' : 'Show Caption'}
+                </button>,
+              ]}
               onImageLoad={handleImageLoad}
+              imageCaption={
+                showCaption && (
+                  <>
+                    <h4 className="projects__name">{certificates[currentIndex].title}</h4>
+                    <div className="projects__technologies">
+                      Technologies:
+                      <span className="projects__text">
+                        {certificates[currentIndex].technologies}
+                      </span>
+                    </div>
+                  </>
+                )
+              }
             />
           )}
         </div>
