@@ -11,8 +11,7 @@ export default function Nav() {
         className="nav__link"
         spy={true}
         smooth={true}
-        duration={500}
-      >
+        duration={500}>
         Main
       </Link>
       <Link
@@ -21,8 +20,7 @@ export default function Nav() {
         className="nav__link"
         spy={true}
         smooth={true}
-        duration={500}
-      >
+        duration={500}>
         Skills
       </Link>
       <Link
@@ -31,9 +29,17 @@ export default function Nav() {
         className="nav__link"
         spy={true}
         smooth={true}
-        duration={500}
-      >
+        duration={500}>
         Projects
+      </Link>
+      <Link
+        activeClass="active"
+        to="certificates"
+        className="nav__link"
+        spy={true}
+        smooth={true}
+        duration={500}>
+        Certificates
       </Link>
       <Link
         activeClass="active"
@@ -41,8 +47,7 @@ export default function Nav() {
         className="nav__link"
         spy={true}
         smooth={true}
-        duration={500}
-      >
+        duration={500}>
         Contacts
       </Link>
     </div>
