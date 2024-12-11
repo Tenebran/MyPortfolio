@@ -15,6 +15,13 @@ import {
   NPM,
   BootstrapIcon,
   AntDesingIcon,
+  VueJSIcon,
+  Vuetify,
+  i18nVue,
+  storyBookIcon,
+  i18next,
+  retoolIcon,
+  keycloakIcon,
 } from '../modules/common/icons/icons';
 
 export const skillsReducer = (
@@ -53,6 +60,13 @@ const initialState: SkillInitialStateType = {
       skillDescription:
         'SPA, Functional components, Hooks, Material-UI, Forms, Routes, Pagination...',
       svgIcon: ReactIcon,
+    },
+    {
+      id: v1(),
+      skillTitle: 'VUE.JS',
+      skillDescription:
+        'Building modern SPA applications with Vue 3, Composition API, Pinia, and TypeScript...',
+      svgIcon: VueJSIcon,
     },
     {
       id: v1(),
@@ -104,6 +118,48 @@ const initialState: SkillInitialStateType = {
       skillTitle: 'REST API',
       skillDescription: 'CRUD Operations, working with Axios library...',
       svgIcon: RestApiIcon,
+    },
+    {
+      id: v1(),
+      skillTitle: 'Vuetify',
+      skillDescription:
+        'Material Design framework for Vue.js with responsive components and themes...',
+      svgIcon: Vuetify,
+    },
+    {
+      id: v1(),
+      skillTitle: 'i18nVue',
+      skillDescription:
+        'Localization for Vue.js, supporting dynamic translations and locale switching....',
+      svgIcon: i18nVue,
+    },
+    {
+      id: v1(),
+      skillTitle: 'Storybook',
+      skillDescription:
+        'Isolated UI component development and documentation with interactive libraries...',
+      svgIcon: storyBookIcon,
+    },
+    {
+      id: v1(),
+      skillTitle: 'i18next',
+      skillDescription:
+        'Robust internationalization with translations, language detection, and formatting...',
+      svgIcon: i18next,
+    },
+    {
+      id: v1(),
+      skillTitle: 'retool',
+      skillDescription:
+        'Low-code platform for building internal tools, integrating APIs, databases, and creating dynamic UIs with drag-and-drop components....',
+      svgIcon: retoolIcon,
+    },
+    {
+      id: v1(),
+      skillTitle: 'keycloack',
+      skillDescription:
+        'Keycloak: SSO, RBAC, OAuth2, user federation, OpenID, authentication management...',
+      svgIcon: keycloakIcon,
     },
     {
       id: v1(),

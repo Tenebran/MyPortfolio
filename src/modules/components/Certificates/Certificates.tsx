@@ -100,7 +100,7 @@ export const Certificates = () => {
               ]}
               onImageLoad={handleImageLoad}
               imageCaption={
-                showCaption && (
+                showCaption && ( 
                   <>
                     <h4 className="projects__name">{certificates[currentIndex].title}</h4>
                     <div className="projects__technologies">

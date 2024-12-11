@@ -1,5 +1,4 @@
 import socialNetwork from '../modules/common/image/social-network.jpg';
-import todolistimage from '../modules/common/image/todo-list.jpg';
 import goSerfImage from '../modules/common/image/go-surf.jpg';
 import konstruktImage from '../modules/common/image/konstrukt.jpg';
 import marioImage from '../modules/common/image/mario.jpg';
@@ -8,6 +7,7 @@ import newYorkerImage from '../modules/common/image/new-yorker.jpg';
 import developmentImage from '../modules/common/image/development-project.jpg';
 import cardsImage from '../modules/common/image/cards.jpg';
 import daytrackImage from '../modules/common/image/daytrack-.jpg';
+import weatherVue from '../modules/common/image/WeatherVue.jpg';
 import { v1 } from 'uuid';
 
 export const projectsReducers = (
@@ -62,6 +62,17 @@ const initialState: ProjectsInitialStateType = {
       technologies: 'React, Redux, Typescript, REST API, Styled Components',
       link: 'https://tenebran.github.io/cards-nya/#/checkemail',
       githubLink: 'https://github.com/Tenebran/cards-nya',
+    },
+    {
+      id: v1(),
+      image: weatherVue,
+      title: 'WEATHER VUE',
+      subTitle:
+        'An interactive weather application that provides real-time weather data and forecasts for selected cities. The application allows users to view detailed weather information, including temperature, humidity, wind speed, and pressure. It supports multiple languages and enables smooth transitions between localized data. ',
+      technologies:
+        'Vue.js, TypeScript, REST API, SCSS, Vuetify, i18n for localization, Axios for data fetching, Jest for unit testing, GitHub Actions for CI/CD',
+      link: 'https://tenebran.github.io/WeatherVue/',
+      githubLink: 'https://github.com/Tenebran/WeatherVue',
     },
     {
       id: v1(),
