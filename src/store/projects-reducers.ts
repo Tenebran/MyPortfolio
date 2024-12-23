@@ -8,6 +8,7 @@ import developmentImage from '../modules/common/image/development-project.jpg';
 import cardsImage from '../modules/common/image/cards.jpg';
 import daytrackImage from '../modules/common/image/daytrack-.jpg';
 import weatherVue from '../modules/common/image/WeatherVue.jpg';
+import sneakerVue from '../modules/common/image/SNEAKERVUE.jpg';
 import { v1 } from 'uuid';
 
 export const projectsReducers = (
@@ -53,6 +54,18 @@ const initialState: ProjectsInitialStateType = {
       link: 'https://tenebran.github.io/DayTrack-',
       githubLink: 'https://github.com/Tenebran/DayTrack-',
     },
+
+    {
+      id: v1(),
+      image: sneakerVue,
+      title: 'SNEAKERVUE',
+      subTitle:
+        'An e-commerce app for sneakers with routing, filtering, sorting, and multi-language support.',
+      technologies:
+        'Vue.js, Typescript, Vue Router, Vite, Tailwind CSS, i18n, Axios,  AutoAnimate, lodash',
+      link: 'https://tenebran.github.io/SneakerVue/',
+      githubLink: 'https://github.com/Tenebran/SneakerVue',
+    },
     {
       id: v1(),
       image: cardsImage,
@@ -67,10 +80,8 @@ const initialState: ProjectsInitialStateType = {
       id: v1(),
       image: weatherVue,
       title: 'WEATHER VUE',
-      subTitle:
-        'An interactive weather application that provides real-time weather data and forecasts for selected cities. The application allows users to view detailed weather information, including temperature, humidity, wind speed, and pressure. It supports multiple languages and enables smooth transitions between localized data. ',
-      technologies:
-        'Vue.js, TypeScript, REST API, SCSS, Vuetify, i18n for localization, Axios for data fetching, Jest for unit testing, GitHub Actions for CI/CD',
+      subTitle: 'An app for checking weather conditions in your city.',
+      technologies: 'Vue 3, Typescript, Vite, Vuetify, Axios, Vue-i18n, SCSS',
       link: 'https://tenebran.github.io/WeatherVue/',
       githubLink: 'https://github.com/Tenebran/WeatherVue',
     },
