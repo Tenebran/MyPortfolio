@@ -3,7 +3,7 @@ import './Footer.scss';
 import { Fade } from 'react-awesome-reveal';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
-import { FooterType } from '../../../store/footer-reduser';
+import { FooterType } from '../../../store/footer/footer-reduser';
 import { FooterItem } from './FooterItem.tsx/FooterItem';
 
 export default function Footer() {
