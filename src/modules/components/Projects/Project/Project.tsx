@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectsType } from '../../../../store/projects-reducers';
+import { ProjectsType } from '../../../../store/projects/projects-reducers';
 import './Project.scss';
 
 export default function Project(props: ProjectsType) {
@@ -13,8 +13,7 @@ export default function Project(props: ProjectsType) {
               href={props.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="projects__image__link"
-            >
+              className="projects__image__link">
               viev more
             </a>
           ) : (
@@ -25,8 +24,7 @@ export default function Project(props: ProjectsType) {
             href={props.githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="projects__image__link"
-          >
+            className="projects__image__link">
             to github
           </a>
         </div>

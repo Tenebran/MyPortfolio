@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
-import { CertificatesInitialStateType } from '../../../store/certificates-reducers';
+import { CertificatesInitialStateType } from '../../../store/certificates/certificates-reducers';
 import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
@@ -100,7 +100,7 @@ export const Certificates = () => {
               ]}
               onImageLoad={handleImageLoad}
               imageCaption={
-                showCaption && ( 
+                showCaption && (
                   <>
                     <h4 className="projects__name">{certificates[currentIndex].title}</h4>
                     <div className="projects__technologies">

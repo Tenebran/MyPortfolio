@@ -3,7 +3,7 @@ import './Projects.scss';
 import Project from './Project/Project';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
-import { ProjectsInitialStateType } from '../../../store/projects-reducers';
+import { ProjectsInitialStateType } from '../../../store/projects/projects-reducers';
 import { Fade } from 'react-awesome-reveal';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 

@@ -1,18 +1,22 @@
-import { projectsReducers } from './projects-reducers';
-import { combineReducers, createStore } from 'redux';
+import { projectsReducers } from './projects/projects-reducers';
 import { profileReducers } from './profile-reducers';
 import { skillsReducer } from './skills-reducers';
 import { footerReducer } from './footer-reduser';
-import { certificatesReducers } from './certificates-reducers';
+import { certificatesReducers } from './certificates/certificates-reducers';
+import { configureStore } from '@reduxjs/toolkit';
 
-const rootReducer = combineReducers({
-  projects: projectsReducers,
-  profile: profileReducers,
-  skills: skillsReducer,
-  footer: footerReducer,
-  certificates: certificatesReducers,
+export const store = configureStore({
+  reducer: {
+    projects: projectsReducers,
+    profile: profileReducers,
+    skills: skillsReducer,
+    footer: footerReducer,
+    certificates: certificatesReducers,
+  },
 });
 
-export const store = createStore(rootReducer);
+export type AppRootStateType = ReturnType<typeof store.getState>;
+export type AppDispatchType = typeof store.dispatch;
 
-export type AppRootStateType = ReturnType<typeof rootReducer>;
+// @ts-expect-error   is necessary.
+window.store = store;
