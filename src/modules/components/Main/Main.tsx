@@ -3,7 +3,7 @@ import './Main.scss';
 import '../../common/styles/Container.scss';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
-import { ProfileType } from '../../../store/profile-reducers';
+import { ProfileType } from '../../../store/profile/profile-reducers';
 import { loadFull } from 'tsparticles';
 import Particles from 'react-tsparticles';
 import { Fade } from 'react-awesome-reveal';
