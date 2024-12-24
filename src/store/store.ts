@@ -1,6 +1,6 @@
 import { projectsReducers } from './projects/projects-reducers';
 import { profileReducers } from './profile/profile-reducers';
-import { skillsReducer } from './skills-reducers';
+import { skillsReducer } from './skills/skills-reducers';
 import { footerReducer } from './footer/footer-reduser';
 import { certificatesReducers } from './certificates/certificates-reducers';
 import { configureStore } from '@reduxjs/toolkit';

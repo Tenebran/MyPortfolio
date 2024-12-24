@@ -5,7 +5,7 @@ import Skill from './Skill/Skill';
 import { Slide } from 'react-awesome-reveal';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
-import { SkillInitialStateType } from '../../../store/skills-reducers';
+import { SkillInitialStateType } from '../../../store/skills/skills-reducers';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 
 export default function Skills() {
