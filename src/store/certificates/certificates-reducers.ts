@@ -1,9 +1,5 @@
-import { createAsyncThunk, createSlice, GetThunkAPI } from '@reduxjs/toolkit';
-import frontEndBasicImg from '../../modules/common/image/certificates-image/frontEndBasic.jpg';
-import frontEndPROImg from '../../modules/common/image/certificates-image/FrontEndPro.jpg';
-import frontEndReactImg from '../../modules/common/image/certificates-image/FrontEndReact.jpg';
-import frontEndVueImg from '../../modules/common/image/certificates-image/FrontEndVue.jpg';
-import { v1 } from 'uuid';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+
 import { certificatesApi } from './certificates-api';
 
 type CertificatesState = {

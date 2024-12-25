@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatchType, AppRootStateType } from '../../../store/store';
+import { useSelector } from 'react-redux';
+import { AppRootStateType } from '../../../store/store';
 import { certificateThunk } from '../../../store/certificates/certificates-reducers';
 import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
@@ -30,9 +30,7 @@ export const Certificates = () => {
 
   useEffect(() => {
     dispatch(certificateThunk.getCertificates());
-
-    console.log('certificates', certificates);
-  }, []);
+  }, [dispatch]);
 
   const openLightbox = (index: number) => {
     setCurrentIndex(index);

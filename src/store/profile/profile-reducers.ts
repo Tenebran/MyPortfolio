@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import profileImage from '../../modules/common/image/profile-image/profile-image-2.jpg';
+import { profileApi } from './profile-api';
 
 export type ProfileType = {
   name: string;
@@ -8,49 +8,40 @@ export type ProfileType = {
   image: string;
 };
 
-type ActionType = { type: 'PROFILE/RETURN-PROFILE' };
-
-// const initialState: ProfileType = {
-//   name: 'Sergej',
-//   surname: 'Garkusha',
-//   profession: 'FrontEnd Developer',
-//   image: profileImage,
-// };
-
 const slice = createSlice({
   name: 'profile',
   initialState: {
-    name: 'Sergej',
-    surname: 'Garkusha',
-    profession: 'FrontEnd Developer',
-    image: profileImage,
+    profile: {
+      name: '',
+      surname: '',
+      profession: '',
+      image: '',
+    } as ProfileType,
   },
   reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(getProfile.fulfilled, (state, action) => {
+      if (action.payload.profile) {
+        state.profile = action.payload.profile;
+      }
+    });
+  },
 });
 
-// export const profileReducers = (
-//   profile: ProfileType = initialState,
-//   action: ActionType
-// ): ProfileType => {
-//   switch (action.type) {
-//     case 'PROFILE/RETURN-PROFILE':
-//       return profile;
-
-//     default:
-//       return profile;
-//   }
-// };
-
 const getProfile = createAsyncThunk<{ profile: ProfileType }, undefined>(
-  'profile/getProfile', async (_, thunkApi) => {
+  'profile/getProfile',
+  async (_, thunkApi) => {
     const { rejectWithValue } = thunkApi;
-try{
-rea await 
+    try {
+      const res = await profileApi.getProfile();
 
-}catch {}
-
+      return { profile: res.data[0] };
+    } catch {
+      return rejectWithValue('Failed to fetch profile');
+    }
   }
 );
+
 export const profileReducers = slice.reducer;
 export const profileActions = slice.actions;
-export const profileThunks = {};
+export const profileThunks = { getProfile };
