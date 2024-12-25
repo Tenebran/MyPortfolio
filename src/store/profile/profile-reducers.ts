@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import profileImage from '../../modules/common/image/profile-image/profile-image-2.jpg';
 
 export type ProfileType = {
@@ -41,6 +41,16 @@ const slice = createSlice({
 //   }
 // };
 
+const getProfile = createAsyncThunk<{ profile: ProfileType }, undefined>(
+  'profile/getProfile', async (_, thunkApi) => {
+    const { rejectWithValue } = thunkApi;
+try{
+rea await 
+
+}catch {}
+
+  }
+);
 export const profileReducers = slice.reducer;
 export const profileActions = slice.actions;
 export const profileThunks = {};

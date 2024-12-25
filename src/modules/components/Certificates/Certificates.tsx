@@ -1,29 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { AppRootStateType } from '../../../store/store';
-import { CertificatesInitialStateType } from '../../../store/certificates/certificates-reducers';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatchType, AppRootStateType } from '../../../store/store';
+import { certificateThunk } from '../../../store/certificates/certificates-reducers';
 import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import { Fade } from 'react-awesome-reveal';
 import { Certificat } from './Certificat/Certificat';
+import { useAppDispatch } from '../../hooks/useAppDispatch';
 
 export const Certificates = () => {
-  const { certificates, certificatesTitile } = useSelector<
-    AppRootStateType,
-    CertificatesInitialStateType
-  >((state) => state.certificates);
+  const dispatch = useAppDispatch();
 
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState(new Set());
   const [showCaption, setShowCaption] = useState(true);
+  const { certificates, certificatesTitile } = useSelector((state: AppRootStateType) => ({
+    certificates: state.certificates.certificates,
+    certificatesTitile: state.certificates.certificatesTitile,
+  }));
 
   useEffect(() => {
     certificates.forEach((cert) => {
       const img = new Image();
       img.src = cert.image;
     });
+  }, []);
+
+  useEffect(() => {
+    dispatch(certificateThunk.getCertificates());
+
+    console.log('certificates', certificates);
   }, []);
 
   const openLightbox = (index: number) => {

@@ -15,8 +15,8 @@ export const store = configureStore({
   },
 });
 
-export type AppRootStateType = ReturnType<typeof store.getState>;
 export type AppDispatchType = typeof store.dispatch;
+export type AppRootStateType = ReturnType<typeof store.getState>;
 
 // @ts-expect-error   is necessary.
 window.store = store;

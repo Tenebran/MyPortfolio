@@ -32,6 +32,8 @@
     "react-scroll": "^1.8.8",
     "react-tsparticles": "^2.12.2",
     "react-typing-effect": "^2.0.5",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0",
     "sass": "^1.68.0",
     "three": "^0.171.0",
     "tsparticles": "^2.12.0",
