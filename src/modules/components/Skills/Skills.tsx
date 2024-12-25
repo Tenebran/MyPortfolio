@@ -7,9 +7,10 @@ import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
 import { SkillInitialStateType } from '../../../store/skills/skills-reducers';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
+import { useAppSelector } from '../../../hooks/useAppSelector';
 
 export default function Skills() {
-  const skills = useSelector<AppRootStateType, SkillInitialStateType>((state) => state.skills);
+  const skills = useAppSelector((state) => state.skills);
   return (
     <div className="skills">
       <div className="container skills__container">

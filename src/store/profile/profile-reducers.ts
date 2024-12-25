@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import profileImage from '../modules/common/image/profile-image/profile-image-2.jpg';
+import profileImage from '../../modules/common/image/profile-image/profile-image-2.jpg';
 
 export type ProfileType = {
   name: string;

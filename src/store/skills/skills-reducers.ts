@@ -173,6 +173,7 @@ const slice = createSlice({
         svgIcon: AntDesingIcon,
       },
     ],
+    skillTitle: 'SKILLS',
   },
   reducers: {},
 });

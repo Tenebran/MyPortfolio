@@ -5,9 +5,10 @@ import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
 import { FooterType } from '../../../store/footer/footer-reduser';
 import { FooterItem } from './FooterItem.tsx/FooterItem';
+import { useAppSelector } from '../../../hooks/useAppSelector';
 
 export default function Footer() {
-  const footer = useSelector<AppRootStateType, Array<FooterType>>((state) => state.footer);
+  const footer = useAppSelector((state) => state.footer);
 
   return (
     <footer className="footer">
