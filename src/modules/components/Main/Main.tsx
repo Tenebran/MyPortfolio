@@ -3,7 +3,7 @@ import './Main.scss';
 import '../../common/styles/Container.scss';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
-import { profileThunks, ProfileType } from '../../../store/profile/profile-reducers';
+import { profileThunks } from '../../../store/profile/profile-reducers';
 import { loadFull } from 'tsparticles';
 import Particles from 'react-tsparticles';
 import { Fade } from 'react-awesome-reveal';
@@ -67,8 +67,6 @@ export default function Main() {
   useEffect(() => {
     dispatch(profileThunks.getProfile());
   }, [dispatch]);
-
-  console.log('profile', profile);
 
   return (
     <div className="main">

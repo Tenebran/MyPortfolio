@@ -43,7 +43,6 @@ export type CertificatesInitialStateType = {
 const getCertificates = createAsyncThunk<
   {
     certificates: CertificatesType[];
-    certificatesTitile: string;
   },
   undefined
 >('certificates/getCertificates', async (_, thunkApi) => {
@@ -52,10 +51,8 @@ const getCertificates = createAsyncThunk<
   try {
     const res = await certificatesApi.getCertificates();
 
-    console.log('res.data', res.data[0].certificates);
     return {
-      certificates: res.data[0].certificates,
-      certificatesTitile: res.data.certificatesTitile,
+      certificates: res.data,
     };
   } catch (error) {
     return rejectWithValue('Failed to fetch certificates');

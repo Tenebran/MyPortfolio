@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Footer.scss';
 import { Fade } from 'react-awesome-reveal';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../store/store';
-import { FooterType } from '../../../store/footer/footer-reduser';
+import { footerThunk, FooterType } from '../../../store/footer/footer-reduser';
 import { FooterItem } from './FooterItem.tsx/FooterItem';
 import { useAppSelector } from '../../../hooks/useAppSelector';
+import { useAppDispatch } from '../../hooks/useAppDispatch';
+import { profile } from 'console';
 
 export default function Footer() {
-  const footer = useAppSelector((state) => state.footer);
+  const dispatch = useAppDispatch();
+  const { footer } = useSelector((state: AppRootStateType) => ({
+    footer: state.footer,
+  }));
+
+  useEffect(() => {
+    dispatch(footerThunk.getFooter());
+  }, []);
 
   return (
     <footer className="footer">
