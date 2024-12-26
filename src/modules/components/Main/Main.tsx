@@ -60,9 +60,7 @@ const particlesOptions = {
 export default function Main() {
   const dispatch = useAppDispatch();
 
-  const { profile } = useSelector((state: AppRootStateType) => ({
-    profile: state.profile.profile,
-  }));
+  const profile = useSelector((state: AppRootStateType) => state.profile.profile);
 
   useEffect(() => {
     dispatch(profileThunks.getProfile());

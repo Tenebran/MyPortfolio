@@ -11,9 +11,7 @@ import { profile } from 'console';
 
 export default function Footer() {
   const dispatch = useAppDispatch();
-  const { footer } = useSelector((state: AppRootStateType) => ({
-    footer: state.footer,
-  }));
+  const footer = useSelector((state: AppRootStateType) => state.footer);
 
   useEffect(() => {
     dispatch(footerThunk.getFooter());

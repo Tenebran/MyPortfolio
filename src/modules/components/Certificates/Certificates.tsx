@@ -16,13 +16,9 @@ export const Certificates = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState(new Set());
   const [showCaption, setShowCaption] = useState(true);
-  const { certificates, certificatesTitile } = useSelector((state: AppRootStateType) => ({
-    certificates: state.certificates.certificates,
-    certificatesTitile: state.certificates.certificatesTitile,
-  }));
-
+  const certificates = useSelector((state: AppRootStateType) => state.certificates);
   useEffect(() => {
-    certificates.forEach((cert) => {
+    certificates.certificates.forEach((cert) => {
       const img = new Image();
       img.src = cert.image;
     });
@@ -43,11 +39,13 @@ export const Certificates = () => {
   };
 
   const nextImage = () => {
-    setCurrentIndex((currentIndex + 1) % certificates.length);
+    setCurrentIndex((currentIndex + 1) % certificates.certificates.length);
   };
 
   const prevImage = () => {
-    setCurrentIndex((currentIndex - 1 + certificates.length) % certificates.length);
+    setCurrentIndex(
+      (currentIndex - 1 + certificates.certificates.length) % certificates.certificates.length
+    );
   };
 
   const toggleCaption = () => {
@@ -57,9 +55,9 @@ export const Certificates = () => {
   return (
     <div className="projects certificates">
       <div className="container projects__container">
-        <SectionTitle title={certificatesTitile} />
+        <SectionTitle title={certificates.certificatesTitile} />
         <div className="projects__list">
-          {certificates.map((certifica, index) => {
+          {certificates.certificates.map((certifica, index) => {
             return (
               <Fade key={certifica.id}>
                 <Certificat
@@ -78,9 +76,12 @@ export const Certificates = () => {
           {isOpen && (
             <Lightbox
               mainSrc={certificates[currentIndex].image}
-              nextSrc={certificates[(currentIndex + 1) % certificates.length].image}
+              nextSrc={certificates[(currentIndex + 1) % certificates.certificates.length].image}
               prevSrc={
-                certificates[(currentIndex - 1 + certificates.length) % certificates.length].image
+                certificates[
+                  (currentIndex - 1 + certificates.certificates.length) %
+                    certificates.certificates.length
+                ].image
               }
               onCloseRequest={() => setIsOpen(false)}
               onMovePrevRequest={prevImage}

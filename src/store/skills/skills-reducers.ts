@@ -190,6 +190,9 @@ const slice = createSlice({
 //   }
 // };
 
+
+
+
 export type SkillInitialStateType = {
   skills: Array<SkillsType>;
   skillTitle: string;
