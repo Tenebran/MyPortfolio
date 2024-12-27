@@ -1,10 +1,3 @@
-import { v1 } from 'uuid';
-import {
-  CodewarsIcon,
-  GithubIcon,
-  LinkedinIcon,
-  TelegramIcon,
-} from '../../modules/common/icons/icons';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { footerApi } from './footer-api';
 

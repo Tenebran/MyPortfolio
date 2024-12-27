@@ -54,7 +54,7 @@ const getCertificates = createAsyncThunk<
     return {
       certificates: res.data,
     };
-  } catch (error) {
+  } catch {
     return rejectWithValue('Failed to fetch certificates');
   }
 });

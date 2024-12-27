@@ -1,16 +1,4 @@
-import socialNetwork from '../../modules/common/image/social-network.jpg';
-import goSerfImage from '../../modules/common/image/go-surf.jpg';
-import konstruktImage from '../../modules/common/image/konstrukt.jpg';
-import marioImage from '../../modules/common/image/mario.jpg';
-import bathmanImage from '../../modules/common/image/bathman.jpg';
-import newYorkerImage from '../../modules/common/image/new-yorker.jpg';
-import developmentImage from '../../modules/common/image/development-project.jpg';
-import cardsImage from '../../modules/common/image/cards.jpg';
-import daytrackImage from '../../modules/common/image/daytrack-.jpg';
-import weatherVue from '../../modules/common/image/WeatherVue.jpg';
-import sneakerVue from '../../modules/common/image/SNEAKERVUE.jpg';
-import { v1 } from 'uuid';
-import { createAsyncThunk, createSlice, Reducer } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { projectsApi } from './projects-api';
 
 const slice = createSlice({

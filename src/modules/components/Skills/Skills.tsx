@@ -3,16 +3,14 @@ import './Skills.scss';
 import '../../common/styles/Container.scss';
 import Skill from './Skill/Skill';
 import { Slide } from 'react-awesome-reveal';
-import { useSelector } from 'react-redux';
-import { AppRootStateType } from '../../../store/store';
-import { SkillInitialStateType, skillsThunk } from '../../../store/skills/skills-reducers';
+import { skillsThunk } from '../../../store/skills/skills-reducers';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
+import { useAppDispatch } from '../../../hooks/useAppDispatch';
 import { useAppSelector } from '../../../hooks/useAppSelector';
-import { useAppDispatch } from '../../hooks/useAppDispatch';
 
 export default function Skills() {
-  const skills = useSelector((state: AppRootStateType) => state.skills.skills);
-  const skillTitle = useSelector((state: AppRootStateType) => state.skills.skillTitle);
+  const skills = useAppSelector((state) => state.skills.skills);
+  const skillTitle = useAppSelector((state) => state.skills.skillTitle);
   const dispatch = useAppDispatch();
 
   useEffect(() => {

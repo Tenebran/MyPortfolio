@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
 import './Main.scss';
 import '../../common/styles/Container.scss';
-import { useSelector } from 'react-redux';
-import { AppRootStateType } from '../../../store/store';
 import { profileThunks } from '../../../store/profile/profile-reducers';
 import { loadFull } from 'tsparticles';
 import Particles from 'react-tsparticles';
 import { Fade } from 'react-awesome-reveal';
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-parallax-tilt';
-import { useAppDispatch } from '../../hooks/useAppDispatch';
+import { useAppDispatch } from '../../../hooks/useAppDispatch';
+import { useAppSelector } from '../../../hooks/useAppSelector';
 
 const particlesInit = async (engine) => {
   await loadFull(engine);
@@ -60,7 +59,7 @@ const particlesOptions = {
 export default function Main() {
   const dispatch = useAppDispatch();
 
-  const profile = useSelector((state: AppRootStateType) => state.profile.profile);
+  const profile = useAppSelector((state) => state.profile.profile);
 
   useEffect(() => {
     dispatch(profileThunks.getProfile());
