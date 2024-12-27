@@ -11,10 +11,8 @@ const slice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getSkills.fulfilled, (state, action) => {
       if (action.payload.skills) {
-        console.log('action.payload.skills', action.payload.skills);
         state.skills = action.payload.skills;
       }
-      console.log('After update state.skills:', state.skills);
     });
   },
 });
@@ -27,7 +25,6 @@ const getSkills = createAsyncThunk<{ skills: SkillsType[] }, undefined>(
 
     try {
       const res = await skillsApi.getSkills();
-      console.log('res data', res.data);
       return { skills: res.data };
     } catch {
       return rejectWithValue('Failed to fetch skills');
