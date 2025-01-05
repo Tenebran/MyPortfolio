@@ -33,6 +33,7 @@ export default function Projects() {
                   title={project.title}
                   link={project.link}
                   githubLink={project.githubLink}
+                  skills={project.skills}
                 />
               </Fade>
             );

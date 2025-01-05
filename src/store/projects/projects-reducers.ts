@@ -30,6 +30,12 @@ const getProjects = createAsyncThunk<{ projects: ProjectsType[] }, undefined>(
   }
 );
 
+type ProjectsSkillsType = {
+  id: string;
+  title: string;
+  logo: string;
+};
+
 export type ProjectsType = {
   id: string;
   image: string;
@@ -38,6 +44,7 @@ export type ProjectsType = {
   technologies: string;
   link: string | null;
   githubLink: string;
+  skills: ProjectsSkillsType[];
 };
 
 export type ProjectsInitialStateType = {

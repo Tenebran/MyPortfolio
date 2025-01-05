@@ -31,9 +31,17 @@ export default function Project(props: ProjectsType) {
       </div>
       <h4 className="projects__name">{props.title}</h4>
       <div className="projects__text">{props.subTitle}</div>
-      <div className="projects__technologies">
-        Technologies:
-        <span className="projects__text">{props.technologies}</span>
+      <span className="projects__technologies projects__technologies-title ">Technologies:</span>
+
+      <div className="projects__technologies projects__technologies-skills">
+        {props.skills.map((skill) => {
+          return (
+            <div className="projects__skills-wrapper" key={skill.id}>
+              <img className="projects__skills-img" src={skill.logo} alt="logo" />
+              <span>{skill.title}</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
